@@ -11,9 +11,9 @@ public class Beer {
 
     public Beer(long id, String brewery, double abv, String style, int ibu) {
         this.id = id;
-        this.brewery = brewery;
+        this.brewery = Objects.requireNonNull(brewery, "Parameter 'brewery' must not be null");
         this.abv = abv;
-        this.style = style;
+        this.style = Objects.requireNonNull(style, "Parameter 'style' must not be null");;
         this.ibu = ibu;
     }
 
